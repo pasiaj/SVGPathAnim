@@ -20,8 +20,8 @@ $d.ready(function(){
           'http://www.w3.org/2000/svg', 'animate');
       // set its attributes
       a.setAttributeNS(null, 'attributeName', 'stroke-dashoffset');
-      a.setAttributeNS(null, 'dur', 1);
-      a.setAttributeNS(null, 'to', 0);
+      a.setAttributeNS(null, 'dur', 0.1);
+      a.setAttributeNS(null, 'to', pathLength);
       a.setAttributeNS(null, 'from', pathLength);
       a.setAttributeNS(null, 'fill', 'freeze');
 
