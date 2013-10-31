@@ -13,4 +13,4 @@ Usage:
 
 ## Demo ##
 
-Test this at (pasiaj.github.io/SVGPathAnim)
+Test this at [http://pasiaj.github.io/SVGPathAnim](pasiaj.github.io/SVGPathAnim)
