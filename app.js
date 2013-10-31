@@ -9,19 +9,20 @@ $d.ready(function(){
     $p          = $('#path');
     p           = $p[0];
     pathLength  = p.getTotalLength();
-    pageHeight  = document.height - window.innerHeight;
+    pageHeight  = document.body.clientHeight - window.innerHeight;
     prevOffset  = pathLength;
 
     $p.attr('stroke-dashArray', '' + pathLength + ',' + pathLength);
     $p.attr('stroke-dashoffset', pathLength);
     $p.attr('stroke', '#000000');
 
+    window.anim = a;
     a = document.createElementNS(
           'http://www.w3.org/2000/svg', 'animate');
       // set its attributes
       a.setAttributeNS(null, 'attributeName', 'stroke-dashoffset');
-      a.setAttributeNS(null, 'dur', 0.1);
-      a.setAttributeNS(null, 'to', pathLength);
+      a.setAttributeNS(null, 'dur', 1);
+      a.setAttributeNS(null, 'to', 0);
       a.setAttributeNS(null, 'from', pathLength);
       a.setAttributeNS(null, 'fill', 'freeze');
 
@@ -35,6 +36,8 @@ function onScroll(event){
     var scrollHeight = $d.scrollTop(),
         scrollPercentage = scrollHeight/pageHeight;
         offset = pathLength * (1 - scrollPercentage);
+
+    console.log(scrollHeight, pageHeight);
 
     a.setAttributeNS(null, 'from', prevOffset);
     a.setAttributeNS(null, 'to', offset);
