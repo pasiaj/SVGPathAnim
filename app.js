@@ -12,11 +12,10 @@ $d.ready(function(){
     pageHeight  = document.body.clientHeight - window.innerHeight;
     prevOffset  = pathLength;
 
-    $p.attr('stroke-dashArray', '' + pathLength + ',' + pathLength);
+    $p.attr('stroke-dashArray', [pathLength, pathLength]);
     $p.attr('stroke-dashoffset', pathLength);
     $p.attr('stroke', '#000000');
 
-    window.anim = a;
     a = document.createElementNS(
           'http://www.w3.org/2000/svg', 'animate');
       // set its attributes
