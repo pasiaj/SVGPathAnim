@@ -41,7 +41,7 @@ $d.ready(function(){
 
     $('#path2')[0].appendChild(b);
 
-    $(window).scroll( onScroll );
+    $(window).scroll( __.throttle(onScroll, 30) );
 });
 
 function onScroll(event){
