@@ -42,7 +42,7 @@ $d.ready(function(){
 
     $('#path2')[0].appendChild(b);
 
-    $(window).scroll( onScroll );
+    $(window).scroll( __.throttle(onScroll, 30) );
 });
 
 function onScroll(event){
@@ -54,6 +54,7 @@ function onScroll(event){
 
     a.setAttributeNS(null, 'from', prevOffset);
     a.setAttributeNS(null, 'to', offset);
+    a.setAttributeNS(null, 'dur', 1);
 
     a.beginElement();
 
