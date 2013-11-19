@@ -53,6 +53,7 @@ function onScroll(event){
 
     a.setAttributeNS(null, 'from', prevOffset);
     a.setAttributeNS(null, 'to', offset);
+    a.setAttributeNS(null, 'dur', 1);
 
     a.beginElement();
 
